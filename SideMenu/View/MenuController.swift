@@ -15,6 +15,7 @@ class MenuController: UIViewController {
     // MARK: - Properties
 
     private var tableView: UITableView!
+    var delegate: HomeControllerDelegate?
 
     // MARK: - Lifecycle
 
@@ -48,7 +49,8 @@ class MenuController: UIViewController {
 
 extension MenuController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("tap tap!")
+        let menuOption = MenuOption(rawValue: indexPath.row)
+        delegate?.handleMenuToggle(forMenuOption: menuOption)
     }
 }
 

@@ -59,6 +59,7 @@ class MenuOptionCell: UITableViewCell {
     // MARK: - Helpers
 
     private func configure() {
+        selectionStyle = .none
         iconImageView.image = menuOption?.image
         descriptionLabel.text = menuOption?.description
     }
