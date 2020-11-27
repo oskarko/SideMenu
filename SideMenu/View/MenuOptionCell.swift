@@ -21,6 +21,7 @@ class MenuOptionCell: UITableViewCell {
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.backgroundColor = .clear
+        iv.tintColor = .white
         return iv
     }()
 

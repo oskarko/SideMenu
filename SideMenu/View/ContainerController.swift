@@ -94,6 +94,10 @@ class ContainerController: UIViewController {
             print("DEBUG: Show notifications")
         case .settings:
             print("DEBUG: Show settings")
+            let controller = SettingsController()
+            let nav = UINavigationController(rootViewController: controller)
+            nav.modalPresentationStyle = .fullScreen
+            present(nav, animated: true, completion: nil)
         }
     }
 
